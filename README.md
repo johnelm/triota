@@ -100,19 +100,19 @@ Here's a taste:
 ```yaml
 # scenarios.yaml
 
-testdata:
+testdata:.             test data definition
 
   url:                                                          # ⬅ object, referenced using dot notation
     duckduckgo: https://duckduckgo.com/
   searchPhrase: design debt economics                           # ⬅ simple variable / value
     
-pages:
+pages:.     # page objects
 
   DuckDuckGo search page:                                       # ⬅ page
     elements:
       Search field:                                             # ⬅ element
         locator:
-          id: search_form_input_homepage                        # ⬅ locator (i.e. id, xpath etc)
+          id: search_form_input_homepage                           # ⬅ locator (i.e. id, xpath etc)
       Search button:
         locator:
           id: search_button_homepage
@@ -403,6 +403,8 @@ IOTA's retry mechanism can be enhanced by providing an optional *retry decorator
 This has been used to detect and handle Recaptcha in IOTA tests, unblocking automated testing where the appearance of Recaptcha is undeterministic because it is controlled by opaque and/or fluid external policies.  
 
 If Recaptcha has been encountered (and not handled) by IOTA, it will undoubtedly cause a scenario step to fail.  By simply providing the existing recaptcha scenario as a retry decorator, Recaptcha can be detected and handled wherever it happens, effectively Recaptcha-proofing the entire suite.  ( Recaptcha must be in 'test' checkbox-only mode - no streetsigns and storefronts - for this to work. )
+
+Here's the full retry mechanism, including decoration, as used for Recaptcha decoration:
 
 ![Retry Decoration](retry-decorator.png?raw=true "Retry Decoration")
 
