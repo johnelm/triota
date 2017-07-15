@@ -93,7 +93,7 @@ Let's have a closer look at IOTA's usage and features.
 You can follow along by cloning this repository locally, and navigating to the `examples/feature-tour` directory.  Basic knowledge of selenium and page objects is helpful, but not required.
 
 ### Fast, easy script authoring
-IOTA uses an easy-to-learn YAML-based DSL, so you can get started quickly.  JavaScript is also supported for and API calls.
+IOTA uses an easy-to-learn YAML-based DSL, so you can get started quickly.  JavaScript is also supported for utility and API calls.
 
 Here's a taste:
 
