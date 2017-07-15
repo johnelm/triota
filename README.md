@@ -2,33 +2,34 @@
 
 <!-- TOC -->
 
-- [Introduction](#introduction)
-  - [Key features](#key-features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-  - [as a devDependency](#as-a-devdependency)
-  - [for the IOTA fiddler or contributor](#for-the-iota-fiddler-or-contributor)
-- [Feature tour-torial](#feature-tour-torial)
-  - [Fast, easy script authoring](#fast-easy-script-authoring)
-  - [Running scenarios](#running-scenarios)
-    - [dry run: manual test instructions, for free](#dry-run-manual-test-instructions-for-free)
-    - [in Chrome](#in-chrome)
-    - [on other platforms, browsers and Selenium grids](#on-other-platforms-browsers-and-selenium-grids)
-  - [Queues and concurrency](#queues-and-concurrency)
-    - [configsets and suites](#configsets-and-suites)
-    - [Running queued scenarios with concurrency](#running-queued-scenarios-with-concurrency)
-  - [Handling 'flaky tests'](#handling-flaky-tests)
-    - [Retry for individual scenario steps](#retry-for-individual-scenario-steps)
-    - [Requeueing scenarios](#requeueing-scenarios)
-    - [Retry decorators and Recaptcha detection](#retry-decorators-and-recaptcha-detection)
-  - [More features and advanced usage](#more-features-and-advanced-usage)
-- [Feature Backlog and Issues](#feature-backlog-and-issues)
+- [IOTA](#iota)
+  - [Introduction](#introduction)
+    - [Key features](#key-features)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+    - [as a devDependency](#as-a-devdependency)
+    - [for the IOTA fiddler or contributor](#for-the-iota-fiddler-or-contributor)
+  - [Feature tour-torial](#feature-tour-torial)
+    - [Fast, easy script authoring](#fast-easy-script-authoring)
+    - [Running scenarios](#running-scenarios)
+      - [dry run: manual test instructions, for free](#dry-run-manual-test-instructions-for-free)
+      - [in Chrome](#in-chrome)
+      - [on other platforms, browsers and Selenium grids](#on-other-platforms-browsers-and-selenium-grids)
+    - [Queues and concurrency](#queues-and-concurrency)
+      - [configsets and suites](#configsets-and-suites)
+      - [Running queued scenarios with concurrency](#running-queued-scenarios-with-concurrency)
+    - [Handling 'flaky tests'](#handling-flaky-tests)
+      - [Retry for individual scenario steps](#retry-for-individual-scenario-steps)
+      - [Requeueing scenarios](#requeueing-scenarios)
+      - [Retry decorators and Recaptcha detection](#retry-decorators-and-recaptcha-detection)
+    - [More features and advanced usage](#more-features-and-advanced-usage)
+  - [Feature Backlog and Issues](#feature-backlog-and-issues)
 
 <!-- /TOC -->
 ## Introduction
 IOTA<sup>*</sup> is a functional test automation framework based on Selenium [WebDriverJS](http://seleniumhq.github.io/selenium/docs/api/javascript/index.html) and Node.js.  Its main goals are rapid scripting, adaptability and maintainability.
 
-Feel free to reach out to me at John_Elm@intuit.com with any questions, I'd love to hear from you!
+Feel free to reach out to me here with any questions, I'd love to hear from you!
 
 ### Key features
 - Simple text based DSL for authoring tests without code (Javascript is also supported)
@@ -407,7 +408,7 @@ If Recaptcha has been encountered (and not handled) by IOTA, it will undoubtedly
 
 ### More features and advanced usage
 
-IOTA has many other features.  I'll provide separate documentation and/or tutorials in the wiki, but here's a list of features that are worth mentioning - feel free to ask me about them at John_Elm@intuit.com .
+IOTA has many other features.  I'll provide separate documentation and/or tutorials in the wiki, but here's a list of features that are worth mentioning - feel free to ask me about them here .
 
 - easy, flexible API testing and utility calls using 'request templates'
 - Javascript DSL
