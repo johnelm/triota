@@ -52,5 +52,7 @@ Here's the full retry mechanism, including decoration, as used for Recaptcha det
 
 ![Retry Decoration](retry-decorator.png?raw=true "Retry Decoration")
 <hr>
-This is the end of the tourtorial for now.  **Back to [Tourtorial home](index.md) **
+This is the end of the tourtorial for now.  
+
+**Back to [Tourtorial home](index.md) **
 
