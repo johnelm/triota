@@ -54,5 +54,5 @@ Here's the full retry mechanism, including decoration, as used for Recaptcha det
 <hr>
 This is the end of the tourtorial for now.  
 
-**Back to [Tourtorial home](index.md) **
+**Back to [Tourtorial home](index.md)**
 
