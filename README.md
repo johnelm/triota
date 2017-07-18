@@ -38,11 +38,13 @@ It has not been used or tested on Windows.
 
 ## Installation
 
-Basic installation is typical:
+Basic installation is the typical:
 
 ```bash
 npm install -g @fdx/iota --registry=https://registry.npmjs.intuit.net` # ( on Intuit network or VPN )
+
 ```
+This will install the framework and all its dependencies, including the Selenium server jar file and Chromedriver.  No other steps are required to drive your local Chrome, or any browser via a remote Selenium server or grid.
 
 ### as a devDependency
 IOTA can be used as a devDependency in your existing node.js project, so you can use it like any other test framework in your npm scripts.
