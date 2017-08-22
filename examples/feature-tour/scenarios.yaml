@@ -1,0 +1,83 @@
+# scenarios.yaml
+
+testdata:
+
+  url:
+    duckduckgo: https://duckduckgo.com/
+    ixquick: https://www.ixquick.com/
+  searchPhrase: design debt economics
+    
+pages:
+
+  DuckDuckGo search page:
+    elements:
+      Search field:
+        locator:
+          id: search_form_input_homepage
+      Search button:
+        locator:
+          id: search_button_homepage
+
+  DuckDuckGo results page:
+    elements:
+      Top search result:
+        locator:
+          id: r1-0
+
+  IxQuick search page:
+    elements:
+      Search field:
+        locator:
+          id: query
+      Search button:
+        locator:
+          id: submit1
+
+  IxQuick results page:
+    elements:
+      Top search result:
+        locator:
+          id: first-result
+
+scenarios:
+
+  Navigate to the DuckDuckGo search page:
+    actions:
+      - browser.get( url.duckduckgo )                           # ⬅ url.duckduckgo is from testdata
+
+  Search for something using DuckDuckGo:
+    actions:
+      - { Scenario: 'Navigate to the DuckDuckGo search page' }  # ⬅ scenarios can include other scenarios
+      - DuckDuckGo search page:                                 # ⬅ page
+        - Search field:                                         # ⬅ element
+          - sendKeys( '${searchPhrase} article' )                 
+        - Search button:
+          - click()
+      - DuckDuckGo results page:                         
+        - Top search result:                         
+          - isDisplayed()                                       # ⬅ actions and assertions are performed
+          - getText().containsIgnoreCase( searchPhrase )        # ⬅ on the containing element
+
+  Navigate to the IxQuick search page:
+    actions:
+      - browser.get( url.ixquick )
+
+  Search for something using IxQuick:
+    actions:
+      - { Scenario: 'Navigate to the IxQuick search page' }
+      - IxQuick search page:
+        - Search field:
+          - sendKeys( '${searchPhrase} article' )                 
+        - Search button:
+          - click()
+      - IxQuick results page:                         
+        - Top search result:                         
+          - isDisplayed()
+          - getText().containsIgnoreCase( searchPhrase )
+
+# scenarios.yaml (excerpt)
+suites:
+  search_engines_sauce_all:
+    sauce_all:
+      - Search for something using DuckDuckGo
+      - Search for something using IxQuick

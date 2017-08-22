@@ -1,0 +1,12 @@
+# sauce-msie.yaml:
+
+configurations:
+  sauce_msie:
+    platform: Windows 10
+    # browserName: internet explorer
+    browserName: MicrosoftEdge
+
+    # selenium grid endpoint and creds:
+    username: fdp-widgets-01
+    accessKey: e8592b10-3e8e-42cd-9964-dc08bb0541e2
+    usingServer: http://ondemand.saucelabs.com:80/wd/hub

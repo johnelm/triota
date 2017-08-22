@@ -1,0 +1,55 @@
+configurations:
+
+  sauce: &sauce
+    username: fdp-widgets-01
+    accessKey: e8592b10-3e8e-42cd-9964-dc08bb0541e2
+    usingServer: http://ondemand.saucelabs.com:80/wd/hub
+
+  chrome_sauce_windows:
+    <<: *sauce
+    platform: Windows 10
+    browserName: chrome
+
+  chrome_sauce_mac:
+    <<: *sauce
+    platform: macOS 10.12
+    browserName: chrome
+
+  firefox_sauce_windows:
+    <<: *sauce
+    platform: Windows 10
+    browserName: firefox
+
+  firefox_sauce_mac:
+    <<: *sauce
+    platform: macOS 10.12
+    browserName: firefox
+
+  safari_sauce:
+    <<: *sauce
+    platform: macOS 10.12
+    browserName: safari
+
+  msie_sauce:
+    <<: *sauce
+    platform: Windows 10
+    browserName: internet explorer
+
+  edge_sauce:
+    <<: *sauce
+    platform: Windows 10
+    browserName: MicrosoftEdge
+
+# platforms.yaml (excerpt)
+configsets:
+  sauce_all:
+    - chrome_sauce_windows
+    - chrome_sauce_mac
+    - firefox_sauce_windows
+    - firefox_sauce_mac
+    - safari_sauce
+    - msie_sauce
+    - edge_sauce
+    
+    
+    

@@ -1,0 +1,10 @@
+# config.yaml
+
+config:
+  retryable errors:
+    - StaleElement                                      # ⬅ common errors that result
+    - Element is not clickable                          # ⬅ from animations in our 
+    - InvalidElementStateError                          # ⬅ web apps
+  requeuable failures:
+    - Navigate in your browser to                       # ⬅ probably means the page didn't even load
+    - Cannot contact reCAPTCHA. Check your connection   # ⬅ occasional when hitting google via http proxy
